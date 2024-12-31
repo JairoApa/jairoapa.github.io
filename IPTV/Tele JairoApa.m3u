@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="I Am Cat" tvg-logo="https://image.api.playstation.com/vulcan/ap/rnd/202407/1812/a345a4d7e1fa7001f1f8ad454fa00eb9254387543683d564.png" group-title="General",I Am Cat
-https://jairoapa.github.io/IPTV/TrailerCatVR/trailer.m3u8
+https://jairoapa.github.io/IPTV/Video1/stream.m3u8
 #EXTINF:-1 tvg-id="APunt.es" tvg-name="A Punt" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logotip_d%27%C3%80_Punt_%282017-%29.svg/512px-Logotip_d%27%C3%80_Punt_%282017-%29.svg.png" group-title="General",A Punt
 https://bcovlive-a.akamaihd.net/1e7e91116b104391a4f22e13a694d94f/eu-central-1/6057955885001/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="Cuatro.es" tvg-name="Cuatro" tvg-logo="https://i.imgur.com/NYLnABb.png" group-title="General",Cuatro
