@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv>
+  <channel id="canal jairoapa">
+    <display-name>canal jairoApa</display-name>
+  </channel>
+
+  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="canal jairoapa">
+    <title>JairoApa</title>
+    <desc>Videos de JairoApa.</desc>
+  </programme>
+</tv>

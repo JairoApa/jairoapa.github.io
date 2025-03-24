@@ -1,0 +1,3 @@
+#EXTM3U url-tvg="https://raw.githubusercontent.com/JairoApa/jairoapa.github.io/main/IPTV/TVStream/guide.xml"
+#EXTINF:-1 tvg-id="http://jairoapa.github.io/IPTV/TVStream/guide.xml" tvg-name="Canal JairoApa" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",Canal JairoApa
+http://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
