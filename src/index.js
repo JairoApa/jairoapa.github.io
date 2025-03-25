@@ -1,19 +1,16 @@
+// src/index.js
 var index_default = {
   async scheduled(event, env, ctx) {
     let currentSequence = parseInt(await env.HLS_SEQUENCE.get("sequence")) || 0;
     currentSequence = (currentSequence + 1) % 209;
     await env.HLS_SEQUENCE.put("sequence", currentSequence.toString());
-    console.log("Secuencia actualizada automáticamente:", currentSequence);
-
-    // ⚠️ Simulación de actualización cada 10s
+    console.log("Secuencia actualizada autom\xE1ticamente:", currentSequence);
     ctx.waitUntil(
       fetch("https://apaiptv.gameplaysofjairo.workers.dev/update")
     );
   },
-
   async fetch(request, env) {
     const url = new URL(request.url);
-
     if (url.pathname === "/update") {
       let currentSequence = parseInt(await env.HLS_SEQUENCE.get("sequence")) || 0;
       currentSequence = (currentSequence + 1) % 209;
@@ -21,7 +18,6 @@ var index_default = {
       console.log("Secuencia actualizada por self-call:", currentSequence);
       return new Response("OK");
     }
-
     if (url.pathname.endsWith(".m3u8")) {
       let currentSequence = parseInt(await env.HLS_SEQUENCE.get("sequence")) || 0;
       let m3u8Text = `#EXTM3U
@@ -49,11 +45,10 @@ var index_default = {
         }
       });
     }
-
     return new Response("Archivo no encontrado", { status: 404 });
   }
 };
-
 export {
   index_default as default
 };
+//# sourceMappingURL=index.js.map
