@@ -5,6 +5,3 @@ compatibility_date = "2025-03-23"
 [[kv_namespaces]]
 binding = "HLS_SEQUENCE"
 id = "75a2fa864dc244a582667fb7277cf22d"
-
-[triggers]
-crons = ["*/10 * * * * *"]  # Se ejecuta cada 10 segundos
