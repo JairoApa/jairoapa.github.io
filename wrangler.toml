@@ -1,4 +1,5 @@
 name = "apaiptv"
+type = "javascript"
 main = "src/index.js"  # Asegúrate de que este archivo existe
 compatibility_date = "2025-03-23"
 
