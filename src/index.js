@@ -1,11 +1,10 @@
-// src/index.js
 var index_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
     const path = url.pathname;
+
     if (path.endsWith(".m3u8")) {
       let currentSequence = parseInt(await env.HLS_SEQUENCE.get("sequence")) || 0;
-      console.log("currentSequence inicial: ", currentSequence);
       let m3u8Text = `#EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-TARGETDURATION:10
@@ -18,13 +17,9 @@ var index_default = {
         const segmentIndex = (currentSequence + i) % segments.length;
         const timestamp = Date.now();
         m3u8Text += `#EXTINF:10.0,
-https://raw.githubusercontent.com/jairoapa/jairoapa.github.io/main/IPTV/TVStreams/${segments[segmentIndex]}?t=${timestamp}
+        http://jairoapa.github.io/IPTV/TVStream/${segments[segmentIndex]}?t=${timestamp}
 `;
-        console.log("Segmento a\xF1adido:", segments[segmentIndex]);
       }
-      currentSequence = (currentSequence + 1) % segments.length;
-      await env.HLS_SEQUENCE.put("sequence", currentSequence.toString());
-      console.log("Secuencia actualizada:", currentSequence);
       return new Response(m3u8Text, {
         headers: {
           "Content-Type": "application/vnd.apple.mpegurl",
@@ -35,10 +30,18 @@ https://raw.githubusercontent.com/jairoapa/jairoapa.github.io/main/IPTV/TVStream
         }
       });
     }
+
     return new Response("Archivo no encontrado", { status: 404 });
+  },
+
+  async scheduled(event, env, ctx) {
+    let currentSequence = parseInt(await env.HLS_SEQUENCE.get("sequence")) || 0;
+    currentSequence = (currentSequence + 1) % 209;
+    await env.HLS_SEQUENCE.put("sequence", currentSequence.toString());
+    console.log("Secuencia actualizada automáticamente:", currentSequence);
   }
 };
+
 export {
   index_default as default
 };
-//# sourceMappingURL=index.js.map
