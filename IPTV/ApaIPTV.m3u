@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="JairoApa VOD" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa VOD
+#EXTINF:-1 tvg-id="ext" tvg-name="JairoApa VOD" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa VOD
 http://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
-rtmp://apaiptv.duckdns/live/canal1
+#EXTINF:-1 tvg-id="ext" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
+rtmp://apaiptv.duckdns.org/live/canal1
