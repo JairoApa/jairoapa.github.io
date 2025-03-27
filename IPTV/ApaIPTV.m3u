@@ -3,5 +3,5 @@
 https://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
 #EXTINF:-1 tvg-id="jairoapa live" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
 http://87.221.167.76/hls/canal1.m3u8
-#EXTINF:-1 tvg-id="a punt" tvg-name="À Punt" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",À Punt
+#EXTINF:-1 tvg-id="a punt" tvg-name="À Punt" tvg-logo="https://scontent.fvlc6-2.fna.fbcdn.net/v/t39.30808-6/339917001_234036789109499_4299665009704291110_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IHQ_fE1ghIUQ7kNvgH-nBvl&_nc_oc=Adk8q4cFWctZylBkS8MfGMA1n3ceAUEQRS09Y2N5xjLW_DVKKqVrI4363jLNQD3w5cc&_nc_zt=23&_nc_ht=scontent.fvlc6-2.fna&_nc_gid=a-72aL7CosS-_nER4xB82Q&oh=00_AYH2OymhnkxO6q9w6Bw84E3FEhcJE-VlVAYdAtTe03RsbQ&oe=67EB6E63" group-title="General",À Punt
 https://bcovlive-a.akamaihd.net/8499d938ef904e39b58a4adec2ddeada/eu-west-1/6057955885001/playlist_dvr.m3u8
