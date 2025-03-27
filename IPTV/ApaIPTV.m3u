@@ -2,4 +2,4 @@
 #EXTINF:-1 tvg-id="" tvg-name="JairoApa VOD" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa VOD
 https://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
-http://apaiptv.duckdns.org/live/canal1
+rtmp://apaiptv.duckdns.org/live/canal1
