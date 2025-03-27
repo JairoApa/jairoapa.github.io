@@ -1,4 +1,4 @@
-#EXTM3U http://jairoapa.github.io/IPTV/TVStream/guide.xml
+#EXTM3U url-tvg="https://www.jairoapa.github.io/IPTV/TVStream/guide.xml"
 #EXTINF:-1 tvg-id="" tvg-name="JairoApa VOD" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa VOD
 http://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
