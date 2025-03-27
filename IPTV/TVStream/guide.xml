@@ -4,7 +4,7 @@
     <display-name>jairoapa vod</display-name>
   </channel>
 
-  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="canal jairoapa">
+  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="jairoapa vod">
     <title>JairoApa</title>
     <desc>Videos de JairoApa.</desc>
   </programme>
@@ -13,7 +13,7 @@
     <display-name>jairoapa live</display-name>
   </channel>
 
-  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="canal jairoapa">
+  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="jairoapa vod">
     <title>JairoApa</title>
     <desc>Directo de JairoApa.</desc>
   </programme>
