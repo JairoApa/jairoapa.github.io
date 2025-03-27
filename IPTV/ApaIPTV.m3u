@@ -3,3 +3,5 @@
 https://apaiptv.gameplaysofjairo.workers.dev/stream.m3u8
 #EXTINF:-1 tvg-id="jairoapa live" tvg-name="JairoApa Live" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",JairoApa Live
 http://87.221.167.76/hls/canal1.m3u8
+#EXTINF:-1 tvg-id="a punt" tvg-name="À Punt" tvg-logo="http://jairoapa.github.io/IPTV/TVStream/LOGO.png" group-title="General",À Punt
+https://bcovlive-a.akamaihd.net/8499d938ef904e39b58a4adec2ddeada/eu-west-1/6057955885001/playlist_dvr.m3u8
