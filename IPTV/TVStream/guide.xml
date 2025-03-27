@@ -18,8 +18,8 @@
     <desc>Directo de JairoApa.</desc>
   </programme>
 
-  <channel id="a punt">
-    <display-name>a punt</display-name>
+  <channel id="à punt">
+    <display-name>à punt</display-name>
   </channel>
 
   <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="a punt">
