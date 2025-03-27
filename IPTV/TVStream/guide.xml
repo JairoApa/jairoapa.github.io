@@ -17,4 +17,13 @@
     <title>JairoApa</title>
     <desc>Directo de JairoApa.</desc>
   </programme>
+
+  <channel id="a punt">
+    <display-name>a punt</display-name>
+  </channel>
+
+  <programme start="20250323120000 +0000" stop="20260323130000 +0000" channel="a punt">
+    <title>À Punt</title>
+    <desc>À Punt.</desc>
+  </programme>
 </tv>
