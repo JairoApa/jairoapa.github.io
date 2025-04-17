@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JairoApa</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .live-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      font-family: sans-serif;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .red-dot {
+      width: 12px;
+      height: 12px;
+      background-color: red;
+      border-radius: 50%;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    video {
+      width: 80%;
+      max-width: 800px;
+      height: auto;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="live-indicator">
+    <div class="red-dot"></div>
+    <span id="live-label">EN DIRECTO</span>
+  </div>
+
+  <video id="video" controls autoplay playsinline></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    const video = document.getElementById('video');
+    const videoSrc = 'http://87.221.167.76/hls/canal1.m3u8';
+
+    const liveTexts = {
+      'es': 'EN DIRECTO',
+      'en': 'LIVE',
+      'fr': 'EN DIRECT',
+      'de': 'LIVE',
+      'it': 'IN DIRETTA',
+      'pt': 'AO VIVO',
+      'ru': 'ПРЯМОЙ ЭФИР',
+      'zh': '直播',
+      'ja': 'ライブ配信'
+    };
+
+    function getErrorMessage(lang) {
+      const messages = {
+        'es': 'Tu navegador no soporta reproducción de canal en directo.',
+        'en': 'Your browser does not support live channel playback.',
+        'fr': 'Votre navigateur ne prend pas en charge la lecture en direct.',
+        'de': 'Ihr Browser unterstützt keine Live-Wiedergabe.',
+        'it': 'Il tuo browser non supporta la riproduzione in diretta.',
+        'pt': 'Seu navegador não suporta reprodução de canal ao vivo.',
+        'ru': 'Ваш браузер не поддерживает воспроизведение прямого эфира.',
+        'zh': '您的浏览器不支持直播频道播放。',
+        'ja': 'お使いのブラウザはライブチャンネルの再生をサポートしていません。'
+      };
+      const baseLang = lang.split('-')[0];
+      return messages[baseLang] || messages['en'];
+    }
+
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.split('-')[0];
+    const liveLabel = document.getElementById('live-label');
+    liveLabel.textContent = liveTexts[langCode] || liveTexts['en'];
+
+    function playVideo() {
+      video.muted = false;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("Autoplay con sonido falló. El navegador puede requerir interacción del usuario.");
+        });
+      }
+    }
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        playVideo();
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoSrc;
+      video.addEventListener('loadedmetadata', () => {
+        playVideo();
+      });
+    } else {
+      alert(getErrorMessage(userLang));
+    }
+
+    // Clic para fullscreen
+    video.addEventListener('click', () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        video.requestFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
